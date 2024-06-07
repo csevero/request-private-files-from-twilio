@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+  <script>
+    const json = fetch('/getPrivateFile?fileName=test.json')
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById('json-data').innerHTML = res
+      })
+  </script>
+  <body>
+    <h1>Test of Twilio Serverless</h1>
+    <p>Loading a .protect image below</p>
+    <span id="json-data"></span>
+  </body>
+</html>
